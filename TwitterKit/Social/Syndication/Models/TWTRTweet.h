@@ -15,9 +15,6 @@
  *
  */
 
-#ifndef TWTRTweet_h
-#define TWTRTweet_h
-
 #import <Foundation/Foundation.h>
 #import <TwitterKit/TWTRJSONConvertible.h>
 
@@ -167,5 +164,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-
-#endif

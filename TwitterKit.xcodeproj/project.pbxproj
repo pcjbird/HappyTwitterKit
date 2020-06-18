@@ -371,6 +371,7 @@
 		7B154E6E19D33A5300B6B64C /* TWTRBezierPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B154E6C19D33A5300B6B64C /* TWTRBezierPaths.m */; };
 		7B154E7219D34B4700B6B64C /* TWTRBirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B154E7019D34B4700B6B64C /* TWTRBirdView.m */; };
 		7B964455199BDF27002117B5 /* TWTRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B964454199BDF27002117B5 /* TWTRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		892215BB249B94A80007FE9E /* libTwitterKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97654E518E0B29B00E25169 /* libTwitterKit.a */; };
 		8983D145249B69D8006F5B85 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8983D143249B69C7006F5B85 /* TwitterCore.framework */; };
 		8983D16A249B70D6006F5B85 /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8983D149249B70B5006F5B85 /* MoPub.framework */; };
 		9236048719F18F5F00532281 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9236048619F18F5F00532281 /* CoreData.framework */; };
@@ -679,6 +680,13 @@
 			remoteGlobalIDString = A97654E418E0B29B00E25169;
 			remoteInfo = "TwitterKit-static";
 		};
+		892215B6249B8C600007FE9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A97654DD18E0B29B00E25169 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A97654E418E0B29B00E25169;
+			remoteInfo = "TwitterKit-static";
+		};
 		9D40087E1B1D033C0091E4D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9D4008771B1D033C0091E4D3 /* TwitterCore.xcodeproj */;
@@ -706,13 +714,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9D5A92201AAA89730039EFCC;
 			remoteInfo = "TwitterCore-static";
-		};
-		BFE8397E1ADF23700035CBA1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A97654DD18E0B29B00E25169 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A97654E418E0B29B00E25169;
-			remoteInfo = "TwitterKit-static";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1390,6 +1391,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892215BB249B94A80007FE9E /* libTwitterKit.a in Frameworks */,
 				ACB17A0F2335DC330078FDF3 /* WebKit.framework in Frameworks */,
 				AA3E099220119CC000792255 /* MobileCoreServices.framework in Frameworks */,
 				AAF0C9F220119C2C0057F438 /* MapKit.framework in Frameworks */,
@@ -2982,7 +2984,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BFE8397F1ADF23700035CBA1 /* PBXTargetDependency */,
+				892215B7249B8C600007FE9E /* PBXTargetDependency */,
 			);
 			name = TwitterKit;
 			productName = "TwitterKit-dynamic";
@@ -3465,15 +3467,15 @@
 			target = A97654E418E0B29B00E25169 /* TwitterKit-static */;
 			targetProxy = 3703BEAE1A37E51B00AA639A /* PBXContainerItemProxy */;
 		};
+		892215B7249B8C600007FE9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A97654E418E0B29B00E25169 /* TwitterKit-static */;
+			targetProxy = 892215B6249B8C600007FE9E /* PBXContainerItemProxy */;
+		};
 		9D40088C1B1D059D0091E4D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TwitterCore-static";
 			targetProxy = 9D40088B1B1D059D0091E4D3 /* PBXContainerItemProxy */;
-		};
-		BFE8397F1ADF23700035CBA1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A97654E418E0B29B00E25169 /* TwitterKit-static */;
-			targetProxy = BFE8397E1ADF23700035CBA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3627,17 +3629,14 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = NO;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterKit/TwitterCore",
 					"$(PROJECT_DIR)/TwitterKit/vendor",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TARGET_BUILD_DIR)/Headers",
-					"$(BUILT_PRODUCTS_DIR)/Headers",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 5.1.0;
 				OTHER_LDFLAGS = (
@@ -3657,17 +3656,14 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = NO;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterKit/TwitterCore",
 					"$(PROJECT_DIR)/TwitterKit/vendor",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TARGET_BUILD_DIR)/Headers",
-					"$(BUILT_PRODUCTS_DIR)/Headers",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 5.1.0;
 				OTHER_LDFLAGS = (

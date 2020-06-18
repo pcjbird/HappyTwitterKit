@@ -18,8 +18,6 @@
 /**
  This header is private to the Twitter Kit SDK and not exposed for public SDK consumption
  */
-#ifndef TWTRCardEntity_h
-#define TWTRCardEntity_h
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -49,5 +47,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-
-#endif
